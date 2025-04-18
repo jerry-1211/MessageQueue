@@ -1,0 +1,11 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: 1234
+  application:
+    name: MessageQueue
+server:
+  port: 8080
+
