@@ -1,4 +1,4 @@
-package com.example.messagequeue.step1;
+package com.example.messagequeue.step1.step1;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
@@ -11,8 +11,9 @@ public class WorkQueueProducer {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    public void sendWorkQueue(String message){
+    public void sendWorkQueue(String workQueueMessage, int duration){
+        String message = workQueueMessage + "|" + duration;
         rabbitTemplate.convertAndSend(RabbitMQConfig.QUEUE_NAME, message);
-        System.out.println("[#] Sent : " + message);
+        System.out.println("[#] Sent workQueue : " + message);
     }
 }

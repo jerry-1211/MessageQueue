@@ -1,4 +1,4 @@
-package com.example.messagequeue.step0;
+package com.example.messagequeue.step0.step0;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
