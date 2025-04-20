@@ -29,3 +29,10 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+
+bootJar {
+    manifest{
+        attributes 'Start-Class' : 'com.example.messagequeue.step1.MessageQueueApplication'
+    }
+}
