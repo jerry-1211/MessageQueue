@@ -1,4 +1,4 @@
-package com.example.messagequeue.step4.step4.step4;
+package com.example.messagequeue.step4.step4;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;

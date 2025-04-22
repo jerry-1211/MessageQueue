@@ -1,4 +1,4 @@
-package com.example.messagequeue.step4.step4.step4;
+package com.example.messagequeue.step4.step4;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

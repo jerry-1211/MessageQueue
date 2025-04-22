@@ -1,4 +1,4 @@
-package com.example.messagequeue.step4.step4;
+package com.example.messagequeue.step4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
