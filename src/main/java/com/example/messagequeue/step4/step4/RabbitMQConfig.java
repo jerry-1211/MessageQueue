@@ -33,18 +33,18 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public Binding errorBinding(Queue errorQueue, DirectExchange fanoutExchange) {
-        return BindingBuilder.bind(errorQueue).to(directExchange()).with("error");
+    public Binding errorBinding() {
+        return BindingBuilder.bind(errorQueue()).to(directExchange()).with("error");
     }
 
     @Bean
-    public Binding warnBinding(Queue warnQueue, DirectExchange fanoutExchange) {
-        return BindingBuilder.bind(warnQueue).to(directExchange()).with("warn");
+    public Binding warnBinding() {
+        return BindingBuilder.bind(warnQueue()).to(directExchange()).with("warn");
     }
 
     @Bean
-    public Binding infoBinding(Queue infoQueue, DirectExchange fanoutExchange) {
-        return BindingBuilder.bind(infoQueue).to(directExchange()).with("info");
+    public Binding infoBinding() {
+        return BindingBuilder.bind(infoQueue()).to(directExchange()).with("info");
     }
 
 }
