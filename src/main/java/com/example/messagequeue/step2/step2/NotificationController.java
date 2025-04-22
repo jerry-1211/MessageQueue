@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/notifications")
+@RequestMapping("/step2/notifications")
 public class NotificationController {
     private final NotificationPublisher publisher;
 
@@ -14,7 +14,7 @@ public class NotificationController {
         this.publisher = publisher;
     }
 
-    //  curl -X POST 'http://localhost:8080/notifications' -H 'Content-Type: application/json' -d '"Hello Subscriber2"'
+    //  curl -X POST 'http://localhost:8080/step2/notifications' -H 'Content-Type: application/json' -d '"Hello Subscriber2"'
     @PostMapping
     public String sendNotification(@RequestBody String message){
         publisher.publish(message);
