@@ -4,8 +4,17 @@ spring:
     port: 5672
     username: guest
     password: 1234
-  application:
-    name: MessageQueue
+    listener:
+      simple:
+        retry:
+          enabled: true
+          initial-interval: 1000
+          max-attempts: 3
+          max-interval: 10000
+        default-requeue-rejected: false
+
+application:
+  name: MessageQueue
+
 server:
   port: 8080
-
