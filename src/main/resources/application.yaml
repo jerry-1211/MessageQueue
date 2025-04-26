@@ -1,10 +1,28 @@
 spring:
+  datasource: # h2는 step9 부터 사용
+    url:  jdbc:h2:tcp://localhost/~/Desktop/Java/h2/db/rabbitStock
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: 1234
-    listener:
+    listener: # 재처리는 step8 부터 yaml에 사용
       simple:
         retry:
           enabled: true
