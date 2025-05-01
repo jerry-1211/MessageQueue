@@ -30,6 +30,7 @@ spring:
           max-attempts: 3
           max-interval: 10000
         default-requeue-rejected: false
+    publisher-confirm-type: correlated
 
 application:
   name: MessageQueue
